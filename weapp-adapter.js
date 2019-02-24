@@ -50,7 +50,7 @@
 
 	var _window = _interopRequireWildcard(_window2);
 
-	var _document = __webpack_require__(37);
+	var _document = __webpack_require__(36);
 
 	var _document2 = _interopRequireDefault(_document);
 
@@ -130,7 +130,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.cancelAnimationFrame = exports.requestAnimationFrame = exports.clearInterval = exports.setInterval = exports.clearTimeout = exports.setTimeout = exports.scrollBy = exports.scrollTo = exports.getComputedStyle = exports.blur = exports.focus = exports.alert = exports.canvas = exports.Symbol = exports.atob = exports.btoa = exports.location = exports.localStorage = exports.MouseEvent = exports.PointerEvent = exports.TouchEvent = exports.WebGLRenderingContext = exports.HTMLVideoElement = exports.HTMLAudioElement = exports.HTMLMediaElement = exports.HTMLCanvasElement = exports.HTMLImageElement = exports.HTMLElement = exports.Element = exports.FileReader = exports.Audio = exports.ImageBitmap = exports.Image = exports.Worker = exports.WebSocket = exports.XMLHttpRequest = exports.navigator = undefined;
+	exports.cancelAnimationFrame = exports.requestAnimationFrame = exports.clearInterval = exports.setInterval = exports.clearTimeout = exports.setTimeout = exports.scrollBy = exports.scrollTo = exports.getComputedStyle = exports.blur = exports.focus = exports.alert = exports.canvas = exports.atob = exports.btoa = exports.location = exports.localStorage = exports.MouseEvent = exports.PointerEvent = exports.TouchEvent = exports.WebGLRenderingContext = exports.HTMLVideoElement = exports.HTMLAudioElement = exports.HTMLMediaElement = exports.HTMLCanvasElement = exports.HTMLImageElement = exports.HTMLElement = exports.Element = exports.FileReader = exports.Audio = exports.ImageBitmap = exports.Image = exports.Worker = exports.WebSocket = exports.XMLHttpRequest = exports.navigator = undefined;
 
 	var _navigator = __webpack_require__(2);
 
@@ -330,15 +330,6 @@
 	    }
 	});
 
-	var _Symbol = __webpack_require__(33);
-
-	Object.defineProperty(exports, 'Symbol', {
-	    enumerable: true,
-	    get: function get() {
-	        return _interopRequireDefault(_Symbol).default;
-	    }
-	});
-
 	var _WindowProperties = __webpack_require__(10);
 
 	Object.keys(_WindowProperties).forEach(function (key) {
@@ -355,15 +346,15 @@
 
 	var _Canvas2 = _interopRequireDefault(_Canvas);
 
-	var _CommonComputedStyle = __webpack_require__(34);
+	var _CommonComputedStyle = __webpack_require__(33);
 
 	var _CommonComputedStyle2 = _interopRequireDefault(_CommonComputedStyle);
 
-	var _ImageComputedStyle = __webpack_require__(35);
+	var _ImageComputedStyle = __webpack_require__(34);
 
 	var _ImageComputedStyle2 = _interopRequireDefault(_ImageComputedStyle);
 
-	var _CanvasComputedStyle = __webpack_require__(36);
+	var _CanvasComputedStyle = __webpack_require__(35);
 
 	var _CanvasComputedStyle2 = _interopRequireDefault(_CanvasComputedStyle);
 
@@ -372,6 +363,8 @@
 	var _Event2 = _interopRequireDefault(_Event);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	//export { default as Symbol } from './Symbol'
+
 
 	var _wx$getSystemInfoSync = wx.getSystemInfoSync(),
 	    platform = _wx$getSystemInfoSync.platform;
@@ -2611,30 +2604,6 @@
 /* 33 */
 /***/ (function(module, exports) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	/**
-	 * 对于ES6中Symbol的极简兼容
-	 * 方便模拟私有变量
-	 */
-
-	var idCounter = 0;
-
-	var _Symbol = function _Symbol2(key) {
-	  return '__' + key + '_' + Math.floor(Math.random() * 1e9) + '_' + ++idCounter + '__';
-	};
-
-	_Symbol.iterator = _Symbol('Symbol.iterator');
-
-	exports.default = _Symbol;
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports) {
-
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -3234,7 +3203,7 @@
 	exports.default = style;
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3243,7 +3212,7 @@
 	    value: true
 	});
 
-	var _CommonComputedStyle = __webpack_require__(34);
+	var _CommonComputedStyle = __webpack_require__(33);
 
 	var _CommonComputedStyle2 = _interopRequireDefault(_CommonComputedStyle);
 
@@ -3269,7 +3238,7 @@
 	exports.default = getImageComputedStyle;
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3278,7 +3247,7 @@
 	    value: true
 	});
 
-	var _CommonComputedStyle = __webpack_require__(34);
+	var _CommonComputedStyle = __webpack_require__(33);
 
 	var _CommonComputedStyle2 = _interopRequireDefault(_CommonComputedStyle);
 
@@ -3303,7 +3272,7 @@
 	exports.default = getCanvasComputedStyle;
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3340,11 +3309,11 @@
 
 	var _Canvas2 = _interopRequireDefault(_Canvas);
 
-	var _DocumentElement = __webpack_require__(38);
+	var _DocumentElement = __webpack_require__(37);
 
 	var _DocumentElement2 = _interopRequireDefault(_DocumentElement);
 
-	var _Body = __webpack_require__(39);
+	var _Body = __webpack_require__(38);
 
 	var _Body2 = _interopRequireDefault(_Body);
 
@@ -3517,7 +3486,7 @@
 	exports.default = document;
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3553,7 +3522,7 @@
 	exports.default = DocumentElement;
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
